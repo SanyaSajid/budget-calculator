@@ -1,0 +1,277 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f7f8fc;
+  padding: 20px;
+}
+.App {
+  width: 100%; 
+  max-width: 1200px; 
+  min-height: 80vh;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.summary h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.Abalance{
+ background-color:#455A64;
+ width: 100%;
+ border-radius: 8px;
+}
+.balance {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  padding: 0px 10px 10px 10px;
+  border-radius: 8px;
+}
+.p{
+  color:white;
+  padding: 10px 10px 10px 10px;
+}
+.balance.positive {
+
+  color:white;
+}
+.balance.negative {
+ color:white;
+}
+.income-expense {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+}
+.income-expense > div {
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+  padding-left: 20px;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+.income {
+  background-color: #D9E7E5;
+  color: black;
+  
+}
+.expense {
+  background-color:#E6E2E6;
+  color: black;
+}
+.heading{
+  font-size: 15px;
+  font-weight: 50px;
+  color: grey;
+}
+.value{
+   font-size: 25px;
+}
+.main-content {
+  display: flex;
+  gap: 20px;
+}
+
+.transaction-form,
+.transaction-list,
+.financial-summary {
+  flex: 1;
+ 
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.transaction-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.transaction-form h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.transaction-form button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  width: 90px;
+  height: 60px;
+}
+.select{
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.transaction-form button.active {
+  background-color: #42887C;
+  color: #fff;
+  margin: 10px 5px 20px 0px;
+}
+.transaction-form select,
+.transaction-form input[type="number"],
+.transaction-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.transaction-form button[type="submit"] {
+  background-color: #f0ad4e;
+  color: white;
+  border: none;
+  margin-left: 2px; 
+  width: 100%;
+  padding: 10px; 
+}
+.transaction-form button[type="submit"]:hover {
+  background-color: #ec971f;
+}
+.add{
+  width: 100%;
+}
+.transaction-list {
+  max-height: none; 
+  overflow-y: visible; 
+  background-color: #F9F9F9;
+  width: 90%; 
+  margin: 0 auto; }
+
+.transaction-list h3 {
+  font-size: 22px; 
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.transaction-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+.transaction-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px; 
+  margin-bottom: 15px; 
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+  background-color: white;
+}
+/*.transaction-list li.income {
+  border-left: 6px solid #66bb6a; 
+}
+.transaction-list li.expense {
+  border-left: 6px solid #ef5350; 
+}*/
+.paid {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.paid span {
+  font-size: 18px; 
+  color: #333;
+}
+.value {
+  font-size: 20px; 
+  font-weight: bold;
+  color: #000;
+}
+.pay {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.icon1 {
+  width: 24px; 
+  height: 24px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .transaction-list {
+    width: 95%; 
+  }
+
+  .transaction-list li {
+    flex-direction: column; 
+    padding: 15px;
+  }
+
+  .paid {
+    align-items: flex-start;
+  }
+  .bold {
+    font-weight: bold;
+    font-size: 20px;    
+}
+
+  .pay {
+    justify-content: flex-end;
+  }
+}
+.amount span {
+  font-weight: bold; 
+  font-size: 20px;    
+  color: #000;        
+ 
+}
+.financial-summary {
+  text-align: center;
+}
+.financial-summary h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.sum{
+  margin: 18px 10px 15px 10px;
+  font-size: 22px;
+}
+.income-chart{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .income-expense {
+    flex-direction: column;
+  }
+}
+.icon{
+  width: 20px;
+  height: 20px;
+  margin-right: 20px ;
+}
+.pay{
+  display: flex;
+}
+.paid{
+  margin-right: 20px;
+}
